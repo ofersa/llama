@@ -56,7 +56,8 @@ The entry point. The AI makes it feel premium from day one.
 | In-wall relay (lights) | Shelly 1PM Gen4 | Wi-Fi/Zigbee/Matter | 8 | $23 | $184 |
 | Wall switch reuse + rewiring allowance | Existing switches kept in place | Electrical labor | 8 circuits | ~$10-20/circuit | ~$80-160 |
 | Motion sensor | Aqara FP300 (mmWave, battery) | Zigbee | 3 | $45 | $135 |
-| | | | | **Typical phase total before install labor** | **~$758-838** |
+| Voice endpoint | M5Stack ATOM Echo S3R | Wi-Fi/ESPHome | 1 | $15 | $15 |
+| | | | | **Typical phase total before install labor** | **~$773-853** |
 
 **Why these devices:**
 - **Shelly 1PM Gen4:** Multi-protocol (Wi-Fi + Zigbee + Matter in one), 16A, power monitoring, fits in junction box. "Works with Home Assistant" certified. No better alternative exists.
@@ -97,6 +98,7 @@ This is the right answer when the customer says, "I want this one switch to turn
 ### What the customer gets
 
 - **AI home assistant** from day one: *"Turn off everything downstairs," "What lights are on?"*
+- **Voice from day one:** One ATOM Echo mic ships with every Phase 1 install — the installer uses it to document wiring hands-free, then it stays as the customer's first voice endpoint
 - **Home definition:** *"What's set up in my house?"* — the AI describes every room and device
 - Phone, voice, and wall-switch control of all lights
 - Presence-activated lighting (hallways, bathrooms, stairs — knows you're there even sitting still)
@@ -111,7 +113,7 @@ This is the right answer when the customer says, "I want this one switch to turn
 
 | | |
 |---|---|
-| Parts + rewiring allowance | ~$758-838 |
+| Parts + rewiring allowance | ~$773-853 |
 | Install labor (half day to full day) | ~$300-500 |
 | **Customer price** | **~$1,100-1,350** |
 | Monthly support (optional) | ~$20/mo |
@@ -386,9 +388,10 @@ Assume:
 | Home Assistant Connect ZBT-2 | 1 | ~NZ$50 | ~NZ$50 |
 | Shelly 1PM Gen4 relays | 10 | ~NZ$39 | ~NZ$390 |
 | Aqara FP300 presence sensors | 4 | ~NZ$76 | ~NZ$304 |
+| M5Stack ATOM Echo S3R (voice) | 1 | ~NZ$25 | ~NZ$25 |
 | Rewiring / switch adaptation allowance | 10 circuits | ~NZ$25 | ~NZ$250 |
 | Scene programming + documentation allowance | 1 | ~NZ$170 | ~NZ$170 |
-| | | **Parts + setup subtotal** | **~NZ$1,724** |
+| | | **Parts + setup subtotal** | **~NZ$1,749** |
 
 Install labor suggestion:
 
@@ -460,11 +463,11 @@ This is a strong real-world starter package for a family home because it gives t
 
 | Phase | What | Hardware | Install | Customer price | Monthly |
 |-------|------|----------|---------|----------------|---------|
-| 1 | Lighting + AI Brain | ~$758-838 | ~$300-500 | ~$1,100-1,350 | $20/mo |
+| 1 | Lighting + AI Brain + Voice | ~$773-853 | ~$300-500 | ~$1,100-1,350 | $20/mo |
 | 2 | Entry Security | ~$380 | ~$200-400 | ~$600-800 | $25/mo |
 | 3 | Whole-Home | ~$500-630 | ~$500-1,000 | ~$1,200-2,000 | $30/mo |
 | 4 | Voice Endpoints | ~$163 | ~$200-400 | ~$400-600 | $35/mo |
-| **All phases** | **Full house** | **~$1,800-2,010** | **~$1,200-2,300** | **~$3,300-4,750** | **$35/mo** |
+| **All phases** | **Full house** | **~$1,815-2,025** | **~$1,200-2,300** | **~$3,300-4,750** | **$35/mo** |
 
 ---
 
