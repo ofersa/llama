@@ -493,6 +493,36 @@ Bad network = bad customer experience = support calls. Every install should incl
   - smart-home designer and automation provider
   - electrician-partnered for compliant wiring work
 
+### Commissioning vs. wiring boundary
+
+This is a compliance risk. Define clearly what your son does and what the electrician does, so there is no grey area around NZ electrical safety regulations.
+
+**Your son (locksmith / smart-home designer):**
+- System design and device selection
+- Home Assistant configuration, automations, scenes, AI setup
+- Lock installation, door hardware, access control
+- Sensor placement (stick-on, battery-powered — no fixed wiring)
+- Voice endpoint setup (plug-in USB devices)
+- Network setup (router, mesh, VLAN)
+- Customer training and handover
+- Ongoing remote support
+
+**Licensed electrician (subcontracted):**
+- All relay installs behind switches (Shelly devices sit on mains wiring)
+- Any new circuit runs or modifications
+- Switch rewiring and adaptation
+- PoE cable runs if going through walls/ceilings
+- Testing and certification of all fixed wiring work
+- Issuing electrical certificates where required
+
+**Rule of thumb:** If it touches mains voltage or goes inside a wall, the electrician does it. If it's plug-in, battery, or software, your son does it.
+
+**Formalise this** in a written agreement with the electrician partner. Include:
+- Who carries liability for what
+- Response time expectations (same-week availability for installs)
+- Pricing agreement (per-circuit rate, day rate, or per-job quote)
+- Insurance coverage on both sides
+
 ---
 
 ## Backup & Recovery
@@ -511,6 +541,33 @@ Bad network = bad customer experience = support calls. Every install should incl
 2. **Monthly support** — remote troubleshooting, updates, seasonal adjustments, new automations ($20-35/mo)
 3. **Phase upgrades** — each phase is an upsell from the last
 4. **Annual service visit** — physical check, firmware updates, battery replacements, network health (~$150-200)
+
+### Monthly support scope (protect your margins)
+
+Define what is included and what costs extra. Without clear boundaries, support customers will consume unlimited time.
+
+**Included in monthly support ($20-35/mo):**
+- Remote troubleshooting via Home Assistant dashboard (up to 30 min/mo)
+- Firmware and Home Assistant updates (scheduled, not emergency)
+- Seasonal schedule adjustments (e.g. daylight saving, holiday modes)
+- One new automation or scene change per month
+- Battery and device health monitoring with alerts
+- AI model updates when new versions are available
+
+**Not included (billed separately):**
+- On-site visits — charge a callout fee (~NZ$100-150 + time)
+- New device installs or hardware additions — quote as a mini-project
+- Network troubleshooting caused by ISP or router changes — charge hourly
+- Recovery from customer-caused issues (factory reset, deleted config)
+- Anything requiring the electrician — separate quote
+
+**Boundaries to communicate at signup:**
+- "Remote support" means screen-share or dashboard access, not phone calls whenever something feels odd
+- Response time: next business day, not same-hour
+- Support hours: defined window (e.g. 9am-5pm weekdays), not 24/7
+- Emergency lockout (smart lock issues) can be offered as premium add-on
+
+**Why this matters:** At 50+ customers, even 15 minutes of unscoped support per customer per month is 12+ hours/month of unpaid work. Define scope early, before the customer base grows.
 
 ### The AI as a sales tool
 
