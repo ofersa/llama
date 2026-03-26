@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Secure, Local-First AI Home Systems</title>
+<title>AI Home Systems NZ</title>
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap');
 
@@ -542,6 +543,36 @@
     letter-spacing: 0.4px;
   }
 
+  .icon-badge {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(0,212,170,0.18), rgba(0,212,170,0.06));
+    border: 1px solid rgba(0,212,170,0.28);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .icon-badge svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .tier-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+
   @media print {
     .slide { page-break-after: always; margin: 0; border-radius: 0; box-shadow: none; }
   }
@@ -820,7 +851,17 @@
   <p style="font-size: 13px; color: var(--light-text); margin-top: -6px;">Typical home: 10 lighting circuits, 4 presence sensors, one kitchen multi-light scene, front entry security optional.</p>
   <div class="tier-grid">
     <div class="tier-card">
-      <div class="tier-name">Standard</div>
+      <div class="tier-head">
+        <div class="icon-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 12h16"></path>
+            <path d="M7 12V7"></path>
+            <path d="M17 12V7"></path>
+            <path d="M6 17h12"></path>
+          </svg>
+        </div>
+        <div class="tier-name">Standard</div>
+      </div>
       <div class="tier-sub">Keep existing switches</div>
       <div class="tier-price">NZ$2.9k-3.6k</div>
       <ul>
@@ -832,7 +873,16 @@
     </div>
     <div class="tier-card featured">
       <div class="tier-tag">Best Seller</div>
-      <div class="tier-name">Signature</div>
+      <div class="tier-head">
+        <div class="icon-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <rect x="5" y="4" width="14" height="16" rx="3"></rect>
+            <path d="M12 8v8"></path>
+            <path d="M8.5 12h7"></path>
+          </svg>
+        </div>
+        <div class="tier-name">Signature</div>
+      </div>
       <div class="tier-sub">Designer switches in main rooms</div>
       <div class="tier-price">NZ$3.8k-5.2k</div>
       <ul>
@@ -843,7 +893,14 @@
       </ul>
     </div>
     <div class="tier-card">
-      <div class="tier-name">Luxury</div>
+      <div class="tier-head">
+        <div class="icon-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 4l2.4 4.8L20 9.6l-4 3.8.9 5.6L12 16.4 7.1 19l.9-5.6-4-3.8 5.6-.8L12 4z"></path>
+          </svg>
+        </div>
+        <div class="tier-name">Luxury</div>
+      </div>
       <div class="tier-sub">Whole-home switch redesign</div>
       <div class="tier-price">NZ$5.2k-7.2k</div>
       <ul>
