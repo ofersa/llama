@@ -421,6 +421,73 @@
   .feature-card h3 { font-size: 13px; }
   .feature-card p { font-size: 11px; color: var(--light-text); margin-top: 2px; }
 
+  .diagram-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 10px;
+  }
+
+  .diagram-card {
+    background: var(--card-bg);
+    border-radius: 8px;
+    padding: 14px 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+
+  .diagram-card h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .flow-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+
+  .flow-box {
+    background: var(--med-bg);
+    color: var(--white);
+    border: 1px solid rgba(0,212,170,0.25);
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 11px;
+    min-width: 78px;
+    text-align: center;
+  }
+
+  .flow-box.accent {
+    background: rgba(0,212,170,0.12);
+    border-color: rgba(0,212,170,0.45);
+    color: var(--accent);
+    font-weight: 600;
+  }
+
+  .flow-arrow {
+    color: var(--accent);
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .mini-note {
+    font-size: 11px;
+    color: var(--light-text);
+    margin-top: 8px;
+    line-height: 1.35;
+  }
+
+  .outcome-bar {
+    margin-top: 14px;
+    background: var(--med-bg);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 12px;
+    color: var(--light-text);
+  }
+
   @media print {
     .slide { page-break-after: always; margin: 0; border-radius: 0; box-shadow: none; }
   }
@@ -539,7 +606,7 @@
       </div>
       <ul>
         <li>AI assistant from day one &mdash; talk to your house</li>
-        <li>Phone control of every light</li>
+        <li>Phone, voice, and wall-switch control</li>
         <li>Presence-activated lighting (mmWave sensors)</li>
         <li>Automated schedules &amp; scenes</li>
         <li>Energy monitoring per circuit</li>
@@ -552,19 +619,76 @@
         <div class="row"><span class="label">Beelink Mini PC (AI + Hub)</span><span class="price">$329</span></div>
         <div class="row"><span class="label">Connect ZBT-2 Radio</span><span class="price">$30</span></div>
         <div class="row"><span class="label">Shelly 1PM Gen4 &times;8 (relays)</span><span class="price">$184</span></div>
+        <div class="row"><span class="label">Switch reuse + rewiring allowance</span><span class="price">$80-160</span></div>
         <div class="row"><span class="label">Aqara FP300 &times;3 (presence)</span><span class="price">$135</span></div>
-        <div class="row total"><span>Hardware total</span><span>~$678</span></div>
+        <div class="row total"><span>Typical phase total</span><span>~$758-838</span></div>
       </div>
     </div>
   </div>
   <div class="price-bar">
     <span class="label">Starting at</span>
-    <span class="amount">$1,000 &ndash; $1,200</span>
+    <span class="amount">$1,100 &ndash; $1,350</span>
     <span class="detail">installed &nbsp;|&nbsp; $20/mo optional support</span>
   </div>
 </div>
 
-<!-- SLIDE 6: Phase 2 -->
+<!-- SLIDE 6: Switch Strategy -->
+<div class="slide">
+  <h2>How the Wall Switches Work</h2>
+  <p style="font-size: 13px; color: var(--light-text); margin-top: -6px;">Keep the normal wall switch. Add smart control behind it or use it to trigger a scene.</p>
+  <div class="diagram-wrap">
+    <div class="diagram-card">
+      <h3>1. One Switch, One Light Group</h3>
+      <div class="flow-line">
+        <div class="flow-box">Power</div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-box accent">Wall Switch</div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-box">Shelly Relay</div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-box">Ceiling Lights</div>
+      </div>
+      <p class="mini-note">Best when one switch already feeds one circuit or one group of lights.</p>
+      <ul style="margin-top: 10px;">
+        <li>Switch still works normally</li>
+        <li>Phone and voice also control the same lights</li>
+        <li>Simple, low-cost, easy to explain</li>
+      </ul>
+    </div>
+    <div class="diagram-card">
+      <h3>2. One Switch, Several Light Circuits</h3>
+      <div class="flow-line" style="margin-bottom: 8px;">
+        <div class="flow-box accent">Wall Switch</div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-box">Home Assistant Scene</div>
+      </div>
+      <div class="flow-line">
+        <div class="flow-box">Relay A</div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-box">Spots</div>
+      </div>
+      <div class="flow-line">
+        <div class="flow-box">Relay B</div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-box">Island</div>
+      </div>
+      <div class="flow-line" style="margin-bottom: 0;">
+        <div class="flow-box">Relay C</div>
+        <div class="flow-arrow">&rarr;</div>
+        <div class="flow-box">Dining</div>
+      </div>
+      <p class="mini-note">Best when the customer wants one button to coordinate multiple independent circuits.</p>
+      <ul style="margin-top: 10px;">
+        <li>Single tap: all selected lights on</li>
+        <li>Second tap or long-press: off or another scene</li>
+        <li>Safe wiring stays separate on each circuit</li>
+      </ul>
+    </div>
+  </div>
+  <div class="outcome-bar"><strong style="color: var(--accent);">Customer result:</strong> the wall switch still feels familiar, but now it can also drive scenes like <em>kitchen all on</em>, <em>dinner mode</em>, or <em>good night</em>.</div>
+</div>
+
+<!-- SLIDE 7: Phase 2 -->
 <div class="slide">
   <p class="phase-label">Phase 2</p>
   <h2 style="margin-bottom: 14px;">Entry Security</h2>
@@ -600,7 +724,73 @@
   </div>
 </div>
 
-<!-- SLIDE 7: Phase 3 -->
+<!-- SLIDE 8: More Features -->
+<div class="slide">
+  <h2>High-Value Features Customers Understand Fast</h2>
+  <div class="grid-2x2" style="margin-top: 8px;">
+    <div class="card card-accent">
+      <div class="flex-row" style="margin-bottom: 8px;">
+        <span style="font-size: 22px;">&#x1f6a8;</span>
+        <h3>Panic Mode</h3>
+      </div>
+      <p style="font-size: 13px;">One action turns on selected lights, starts recording, and sends alerts.</p>
+    </div>
+    <div class="card card-accent">
+      <div class="flex-row" style="margin-bottom: 8px;">
+        <span style="font-size: 22px;">&#x1f319;</span>
+        <h3>Night Path Lighting</h3>
+      </div>
+      <p style="font-size: 13px;">Soft low-level lighting from bedroom to bathroom without blinding anyone.</p>
+    </div>
+    <div class="card card-accent">
+      <div class="flex-row" style="margin-bottom: 8px;">
+        <span style="font-size: 22px;">&#x1f50b;</span>
+        <h3>Battery Watch</h3>
+      </div>
+      <p style="font-size: 13px;">The AI warns about weak lock and sensor batteries before they fail.</p>
+    </div>
+    <div class="card card-accent">
+      <div class="flex-row" style="margin-bottom: 8px;">
+        <span style="font-size: 22px;">&#x1f6ac;</span>
+        <h3>Arrival &amp; Guest Modes</h3>
+      </div>
+      <p style="font-size: 13px;">Homecoming lights, guest-friendly access, and quiet hours for family routines.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 9: Sample Quote -->
+<div class="slide">
+  <h2>Sample Quote: 3-Bedroom Home (NZ)</h2>
+  <div class="two-col" style="gap: 20px;">
+    <div class="card">
+      <h3 style="margin-bottom: 10px;">Phase 1: Lighting + AI Brain</h3>
+      <div class="parts-table">
+        <div class="row"><span class="label">Mini PC + radio</span><span class="price">~NZ$610</span></div>
+        <div class="row"><span class="label">10 relays + 4 presence sensors</span><span class="price">~NZ$694</span></div>
+        <div class="row"><span class="label">Rewiring + scene setup allowance</span><span class="price">~NZ$420</span></div>
+        <div class="row"><span class="label">Electrician + commissioning</span><span class="price">~NZ$1,100-1,800</span></div>
+        <div class="row total"><span>Quoted Phase 1</span><span>~NZ$2,850-3,550</span></div>
+      </div>
+      <p style="font-size: 11px; color: var(--light-text); margin-top: 10px;">10 lighting circuits, 4 presence sensors, existing switches reused, one multi-light kitchen scene.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom: 10px;">Phase 2: Entry Security Add-On</h3>
+      <div class="parts-table">
+        <div class="row"><span class="label">Smart lock + 4 sensors + doorbell</span><span class="price">~NZ$646</span></div>
+        <div class="row"><span class="label">Security setup + automations</span><span class="price">~NZ$200</span></div>
+        <div class="row"><span class="label">Locksmith install + setup</span><span class="price">~NZ$450-800</span></div>
+        <div class="row total"><span>Quoted Phase 2</span><span>~NZ$1,300-1,650</span></div>
+      </div>
+      <div class="convo-box" style="margin-top: 12px;">
+        <p class="q"><span>Full starter package: </span><em>lighting + AI + front-door security</em></p>
+        <p class="a"><span>Total: </span><em>~NZ$4,150-5,200</em></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 10: Phase 3 -->
 <div class="slide">
   <p class="phase-label">Phase 3</p>
   <h2 style="margin-bottom: 12px;">Whole-Home Automation</h2>
@@ -637,7 +827,7 @@
   </div>
 </div>
 
-<!-- SLIDE 8: Phase 4 -->
+<!-- SLIDE 11: Phase 4 -->
 <div class="slide">
   <p class="phase-label">Phase 4</p>
   <h2 style="margin-bottom: 14px;">Voice Control &mdash; Every Room</h2>
@@ -685,7 +875,7 @@
   </div>
 </div>
 
-<!-- SLIDE 9: Specialty Packages -->
+<!-- SLIDE 12: Specialty Packages -->
 <div class="slide">
   <h2>Specialty Packages</h2>
   <div class="grid-3">
@@ -722,7 +912,7 @@
   </div>
 </div>
 
-<!-- SLIDE 10: The AI Difference -->
+<!-- SLIDE 13: The AI Difference -->
 <div class="slide">
   <h2>The AI Difference</h2>
   <p style="color: var(--light-text); font-style: italic; font-size: 14px; margin-bottom: 14px;">Talk to your house like a person</p>
@@ -744,7 +934,7 @@
   </div>
 </div>
 
-<!-- SLIDE 11: Pricing Overview -->
+<!-- SLIDE 14: Pricing Overview -->
 <div class="slide">
   <h2>Investment Overview</h2>
   <table class="pricing-table">
@@ -752,29 +942,29 @@
       <tr><th>Phase</th><th>What</th><th>Hardware</th><th>Installed</th><th>Monthly</th></tr>
     </thead>
     <tbody>
-      <tr><td>1</td><td>Lighting + AI Brain</td><td>~$678</td><td>$1,000-1,200</td><td>$20/mo</td></tr>
-      <tr><td>2</td><td>Entry Security</td><td>~$380</td><td>$600-800</td><td>$25/mo</td></tr>
-      <tr><td>3</td><td>Whole-Home</td><td>~$500-630</td><td>$1,200-2,000</td><td>$30/mo</td></tr>
-      <tr><td>4</td><td>Voice Endpoints</td><td>~$163</td><td>$400-600</td><td>$35/mo</td></tr>
-      <tr class="total-row"><td>All</td><td>Full House</td><td>~$1,800</td><td>$3,200-4,600</td><td>$35/mo</td></tr>
+      <tr><td>1</td><td>Lighting + AI Brain</td><td>~NZ$1,280-1,420</td><td>NZ$2,850-3,550</td><td>NZ$35/mo</td></tr>
+      <tr><td>2</td><td>Entry Security</td><td>~NZ$640-850</td><td>NZ$1,300-1,650</td><td>NZ$40/mo</td></tr>
+      <tr><td>3</td><td>Whole-Home</td><td>~NZ$850-1,070</td><td>NZ$2,000-3,350</td><td>NZ$50/mo</td></tr>
+      <tr><td>4</td><td>Voice Endpoints</td><td>~NZ$275</td><td>NZ$700-1,050</td><td>NZ$60/mo</td></tr>
+      <tr class="total-row"><td>All</td><td>Full House</td><td>~NZ$3,050-3,615</td><td>NZ$6,850-9,600</td><td>NZ$60/mo</td></tr>
     </tbody>
   </table>
   <p style="text-align: center; color: var(--warm); font-style: italic; font-size: 14px; margin-top: 16px;">
-    Start with Phase 1. Upgrade anytime. Each phase builds on the last.
+    NZ pricing guide. Imported hardware and electrician scope will move final numbers.
   </p>
   <div style="display: flex; gap: 20px; justify-content: center; margin-top: 16px;">
     <div class="stat-card" style="flex: 1; max-width: 220px;">
       <p class="label">Full house from</p>
-      <p class="value" style="color: var(--accent);">$3,200</p>
+      <p class="value" style="color: var(--accent);">NZ$6,850</p>
     </div>
     <div class="stat-card" style="flex: 1; max-width: 220px;">
       <p class="label">Camera subscriptions</p>
-      <p class="value" style="color: var(--green);">$0/mo</p>
+      <p class="value" style="color: var(--green);">NZ$0/mo</p>
     </div>
   </div>
 </div>
 
-<!-- SLIDE 12: Why Us -->
+<!-- SLIDE 15: Why Us -->
 <div class="slide">
   <h2 style="margin-bottom: 16px;">Why Choose Us</h2>
   <div class="grid-2x2" style="margin-top: 0; gap: 12px;">
@@ -795,8 +985,8 @@
     <div class="reason-row">
       <div class="icon-circle">&#x2713;</div>
       <div>
-        <h3>100% Local &amp; Private</h3>
-        <p>No cloud accounts, no voice recordings sent anywhere, no corporate dependencies.</p>
+        <h3>NZ-Compliant Install Model</h3>
+        <p>Locksmith-led design and access expertise, with electrician-partnered fixed wiring where required.</p>
       </div>
     </div>
     <div class="reason-row">
@@ -823,7 +1013,7 @@
   </div>
 </div>
 
-<!-- SLIDE 13: Contact -->
+<!-- SLIDE 16: Contact -->
 <div class="slide centered">
   <div style="margin-top: 40px; font-size: 48px;">&#x1f3e0;</div>
   <h1 style="margin-top: 16px; font-size: 32px;">Ready to Make Your Home Smart?</h1>
