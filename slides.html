@@ -488,6 +488,60 @@
     color: var(--light-text);
   }
 
+  .tier-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-top: 14px;
+  }
+
+  .tier-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 16px 16px 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    position: relative;
+  }
+
+  .tier-card.featured {
+    border: 2px solid var(--accent);
+  }
+
+  .tier-name {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .tier-sub {
+    color: var(--dim-text);
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  .tier-price {
+    color: var(--accent);
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .tier-tag {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(0,212,170,0.14);
+    color: var(--accent);
+    border-radius: 999px;
+    padding: 4px 8px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+
   @media print {
     .slide { page-break-after: always; margin: 0; border-radius: 0; box-shadow: none; }
   }
@@ -605,8 +659,8 @@
         <h3 style="color: var(--warm);">What You Get</h3>
       </div>
       <ul>
-        <li>AI assistant + voice mic from day one</li>
-        <li>Phone, voice, and wall-switch control</li>
+        <li>AI assistant + one basic voice point</li>
+        <li>Phone, basic voice, and wall-switch control</li>
         <li>Presence-activated lighting (mmWave sensors)</li>
         <li>Automated schedules &amp; scenes</li>
         <li>Energy monitoring per circuit</li>
@@ -616,20 +670,20 @@
     <div class="card">
       <h3 style="margin-bottom: 10px;">Parts &amp; Pricing</h3>
       <div class="parts-table">
-        <div class="row"><span class="label">Beelink Mini PC (AI + Hub)</span><span class="price">$329</span></div>
-        <div class="row"><span class="label">Connect ZBT-2 Radio</span><span class="price">$30</span></div>
-        <div class="row"><span class="label">Shelly 1PM Gen4 &times;8 (relays)</span><span class="price">$184</span></div>
-        <div class="row"><span class="label">Switch reuse + rewiring allowance</span><span class="price">$80-160</span></div>
-        <div class="row"><span class="label">Aqara FP300 &times;3 (presence)</span><span class="price">$135</span></div>
-        <div class="row"><span class="label">M5Stack ATOM Echo (voice)</span><span class="price">$15</span></div>
-        <div class="row total"><span>Typical phase total</span><span>~$773-853</span></div>
+        <div class="row"><span class="label">Beelink Mini PC (AI + Hub)</span><span class="price">~NZ$560</span></div>
+        <div class="row"><span class="label">Connect ZBT-2 Radio</span><span class="price">~NZ$50</span></div>
+        <div class="row"><span class="label">Shelly 1PM Gen4 &times;8 (relays)</span><span class="price">~NZ$312</span></div>
+        <div class="row"><span class="label">Switch reuse + rewiring allowance</span><span class="price">~NZ$135-270</span></div>
+        <div class="row"><span class="label">Aqara FP300 &times;3 (presence)</span><span class="price">~NZ$228</span></div>
+        <div class="row"><span class="label">M5Stack ATOM Echo (basic voice point)</span><span class="price">~NZ$25</span></div>
+        <div class="row total"><span>Typical phase total</span><span>~NZ$1,310-1,445</span></div>
       </div>
     </div>
   </div>
   <div class="price-bar">
     <span class="label">Starting at</span>
-    <span class="amount">$1,100 &ndash; $1,350</span>
-    <span class="detail">installed &nbsp;|&nbsp; $20/mo optional support</span>
+    <span class="amount">NZ$2,900 &ndash; NZ$3,600</span>
+    <span class="detail">installed &nbsp;|&nbsp; NZ$35/mo optional support</span>
   </div>
 </div>
 
@@ -711,17 +765,17 @@
     <div class="card">
       <h3 style="margin-bottom: 10px;">Parts &amp; Pricing</h3>
       <div class="parts-table">
-        <div class="row"><span class="label">Aqara U200 Smart Lock</span><span class="price">$200</span></div>
-        <div class="row"><span class="label">Aqara P2 Sensors &times;4</span><span class="price">$80</span></div>
-        <div class="row"><span class="label">Reolink Doorbell PoE</span><span class="price">$100</span></div>
-        <div class="row total"><span>Hardware total</span><span>~$380</span></div>
+        <div class="row"><span class="label">Aqara U200 Smart Lock</span><span class="price">~NZ$340</span></div>
+        <div class="row"><span class="label">Aqara P2 Sensors &times;4</span><span class="price">~NZ$136</span></div>
+        <div class="row"><span class="label">Reolink Doorbell PoE</span><span class="price">~NZ$170</span></div>
+        <div class="row total"><span>Hardware total</span><span>~NZ$646</span></div>
       </div>
     </div>
   </div>
   <div class="price-bar">
     <span class="label">Add-on:</span>
-    <span class="amount">$600 &ndash; $800</span>
-    <span class="detail">installed &nbsp;|&nbsp; $25/mo support</span>
+    <span class="amount">NZ$1,300 &ndash; NZ$1,650</span>
+    <span class="detail">installed &nbsp;|&nbsp; NZ$40/mo support</span>
   </div>
 </div>
 
@@ -762,33 +816,45 @@
 
 <!-- SLIDE 9: Sample Quote -->
 <div class="slide">
-  <h2>Sample Quote: 3-Bedroom Home (NZ)</h2>
-  <div class="two-col" style="gap: 20px;">
-    <div class="card">
-      <h3 style="margin-bottom: 10px;">Phase 1: Lighting + AI Brain</h3>
-      <div class="parts-table">
-        <div class="row"><span class="label">Mini PC + radio</span><span class="price">~NZ$610</span></div>
-        <div class="row"><span class="label">10 relays + 4 sensors + voice mic</span><span class="price">~NZ$719</span></div>
-        <div class="row"><span class="label">Rewiring + scene setup allowance</span><span class="price">~NZ$420</span></div>
-        <div class="row"><span class="label">Electrician + commissioning</span><span class="price">~NZ$1,100-1,800</span></div>
-        <div class="row total"><span>Quoted Phase 1</span><span>~NZ$2,850-3,550</span></div>
-      </div>
-      <p style="font-size: 11px; color: var(--light-text); margin-top: 10px;">10 lighting circuits, 4 presence sensors, existing switches reused, one multi-light kitchen scene.</p>
+  <h2>3-Bedroom Home Packages (NZ)</h2>
+  <p style="font-size: 13px; color: var(--light-text); margin-top: -6px;">Typical home: 10 lighting circuits, 4 presence sensors, one kitchen multi-light scene, front entry security optional.</p>
+  <div class="tier-grid">
+    <div class="tier-card">
+      <div class="tier-name">Standard</div>
+      <div class="tier-sub">Keep existing switches</div>
+      <div class="tier-price">NZ$2.9k-3.6k</div>
+      <ul>
+        <li>Hidden relays behind existing switches</li>
+        <li>AI brain + one basic voice point</li>
+        <li>App control, schedules, and scenes</li>
+        <li>Best value starting package</li>
+      </ul>
     </div>
-    <div class="card">
-      <h3 style="margin-bottom: 10px;">Phase 2: Entry Security Add-On</h3>
-      <div class="parts-table">
-        <div class="row"><span class="label">Smart lock + 4 sensors + doorbell</span><span class="price">~NZ$646</span></div>
-        <div class="row"><span class="label">Security setup + automations</span><span class="price">~NZ$200</span></div>
-        <div class="row"><span class="label">Locksmith install + setup</span><span class="price">~NZ$450-800</span></div>
-        <div class="row total"><span>Quoted Phase 2</span><span>~NZ$1,300-1,650</span></div>
-      </div>
-      <div class="convo-box" style="margin-top: 12px;">
-        <p class="q"><span>Full starter package: </span><em>lighting + AI + front-door security</em></p>
-        <p class="a"><span>Total: </span><em>~NZ$4,150-5,200</em></p>
-      </div>
+    <div class="tier-card featured">
+      <div class="tier-tag">Best Seller</div>
+      <div class="tier-name">Signature</div>
+      <div class="tier-sub">Designer switches in main rooms</div>
+      <div class="tier-price">NZ$3.8k-5.2k</div>
+      <ul>
+        <li>Entry, kitchen, dining, living, hallway upgraded</li>
+        <li>Premium switch feel where customers notice it most</li>
+        <li>Cleaner scene control for shared spaces</li>
+        <li>Typical uplift: NZ$900-1,600</li>
+      </ul>
+    </div>
+    <div class="tier-card">
+      <div class="tier-name">Luxury</div>
+      <div class="tier-sub">Whole-home switch redesign</div>
+      <div class="tier-price">NZ$5.2k-7.2k</div>
+      <ul>
+        <li>Premium switches throughout the home</li>
+        <li>Matched keypad and finish strategy</li>
+        <li>Best fit for renovations and higher-end homes</li>
+        <li>Most polished look and feel</li>
+      </ul>
     </div>
   </div>
+  <div class="outcome-bar"><strong style="color: var(--accent);">Front-door security add-on:</strong> add smart lock, door sensors, and local doorbell camera for about <strong>NZ$1,300-1,650</strong>.</div>
 </div>
 
 <!-- SLIDE 10: Phase 3 -->
@@ -823,8 +889,8 @@
   </div>
   <div class="price-bar">
     <span class="label">Add-on:</span>
-    <span class="amount">$1,200 &ndash; $2,000</span>
-    <span class="detail">installed &nbsp;|&nbsp; hardware ~$500-630 &nbsp;|&nbsp; $30/mo support</span>
+    <span class="amount">NZ$2,000 &ndash; NZ$3,350</span>
+    <span class="detail">installed &nbsp;|&nbsp; hardware ~NZ$850-1,070 &nbsp;|&nbsp; NZ$50/mo support</span>
   </div>
 </div>
 
@@ -853,17 +919,17 @@
           <p class="desc">Premium rooms (kitchen, living room)</p>
         </div>
         <div style="text-align: right;">
-          <div class="price-tag">$59</div>
+          <div class="price-tag">NZ$100</div>
           <div class="price-unit">each</div>
         </div>
       </div>
       <div class="device-card">
         <div>
           <h3>M5Stack ATOM Echo</h3>
-          <p class="desc">Budget satellites (bedrooms, bathrooms)</p>
+          <p class="desc">Extra satellites beyond the first Phase 1 voice point</p>
         </div>
         <div style="text-align: right;">
-          <div class="price-tag">$15</div>
+          <div class="price-tag">NZ$25</div>
           <div class="price-unit">each</div>
         </div>
       </div>
@@ -871,8 +937,8 @@
   </div>
   <div class="price-bar">
     <span class="label">Add-on:</span>
-    <span class="amount">$400 &ndash; $600</span>
-    <span class="detail">installed &nbsp;|&nbsp; $35/mo support</span>
+    <span class="amount">NZ$700 &ndash; NZ$1,050</span>
+    <span class="detail">installed &nbsp;|&nbsp; NZ$60/mo support</span>
   </div>
 </div>
 
@@ -919,7 +985,7 @@
   <p style="color: var(--light-text); font-style: italic; font-size: 14px; margin-bottom: 14px;">Talk to your house like a person</p>
   <div class="convo-box">
     <p class="q"><span>You: </span><em>&ldquo;What's in my house?&rdquo;</em></p>
-    <p class="a"><span>AI: </span><em>&ldquo;You have 8 smart lights, 3 presence sensors, 1 voice mic, and 2 scenes configured. Your garage and front gate aren't connected yet.&rdquo;</em></p>
+    <p class="a"><span>AI: </span><em>&ldquo;You have 8 smart lights, 3 presence sensors, 1 voice point, and 2 scenes configured. Your garage and front gate aren't connected yet.&rdquo;</em></p>
   </div>
   <div class="convo-box">
     <p class="q"><span>You: </span><em>&ldquo;Is the house secure?&rdquo;</em></p>
@@ -943,20 +1009,19 @@
       <tr><th>Phase</th><th>What</th><th>Hardware</th><th>Installed</th><th>Monthly</th></tr>
     </thead>
     <tbody>
-      <tr><td>1</td><td>Lighting + AI + Voice</td><td>~NZ$1,305-1,445</td><td>NZ$2,850-3,550</td><td>NZ$35/mo</td></tr>
-      <tr><td>2</td><td>Entry Security</td><td>~NZ$640-850</td><td>NZ$1,300-1,650</td><td>NZ$40/mo</td></tr>
-      <tr><td>3</td><td>Whole-Home</td><td>~NZ$850-1,070</td><td>NZ$2,000-3,350</td><td>NZ$50/mo</td></tr>
-      <tr><td>4</td><td>Voice Endpoints</td><td>~NZ$275</td><td>NZ$700-1,050</td><td>NZ$60/mo</td></tr>
-      <tr class="total-row"><td>All</td><td>Full House</td><td>~NZ$3,050-3,615</td><td>NZ$6,850-9,600</td><td>NZ$60/mo</td></tr>
+      <tr><td>1</td><td>Lighting + AI + Voice</td><td>~NZ$1,310-1,445</td><td>NZ$2,900-3,600</td><td>NZ$35/mo</td></tr>
+      <tr><td>1+2</td><td>+ Entry Security</td><td>~NZ$1,952-2,287</td><td>NZ$4,200-5,250</td><td>NZ$40/mo</td></tr>
+      <tr><td>1-3</td><td>+ Whole-Home</td><td>~NZ$2,802-3,352</td><td>NZ$6,200-8,600</td><td>NZ$50/mo</td></tr>
+      <tr class="total-row"><td>1-4</td><td>+ Voice Endpoints</td><td>~NZ$3,077-3,627</td><td>NZ$6,900-9,650</td><td>NZ$60/mo</td></tr>
     </tbody>
   </table>
   <p style="text-align: center; color: var(--warm); font-style: italic; font-size: 14px; margin-top: 16px;">
-    NZ pricing guide. Imported hardware and electrician scope will move final numbers.
+    Monthly support is one fee for the whole system &mdash; it goes up as you add phases, not stacked.
   </p>
   <div style="display: flex; gap: 20px; justify-content: center; margin-top: 16px;">
     <div class="stat-card" style="flex: 1; max-width: 220px;">
       <p class="label">Full house from</p>
-      <p class="value" style="color: var(--accent);">NZ$6,850</p>
+      <p class="value" style="color: var(--accent);">NZ$6,900</p>
     </div>
     <div class="stat-card" style="flex: 1; max-width: 220px;">
       <p class="label">Camera subscriptions</p>

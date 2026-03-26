@@ -49,15 +49,17 @@ The entry point. The AI makes it feel premium from day one.
 
 ### Parts list
 
-| Item | Model | Protocol | Qty (typical) | Unit price | Subtotal |
-|------|-------|----------|---------------|------------|----------|
-| AI + Hub | Beelink EQR6 (16GB/500GB) | N/A | 1 | $329 | $329 |
-| Zigbee/Thread radio | Home Assistant Connect ZBT-2 | Zigbee/Thread | 1 | $30 | $30 |
-| In-wall relay (lights) | Shelly 1PM Gen4 | Wi-Fi/Zigbee/Matter | 8 | $23 | $184 |
-| Wall switch reuse + rewiring allowance | Existing switches kept in place | Electrical labor | 8 circuits | ~$10-20/circuit | ~$80-160 |
-| Motion sensor | Aqara FP300 (mmWave, battery) | Zigbee | 3 | $45 | $135 |
-| Voice endpoint | M5Stack ATOM Echo S3R | Wi-Fi/ESPHome | 1 | $15 | $15 |
-| | | | | **Typical phase total before install labor** | **~$773-853** |
+| Item | Model | Qty | USD | NZD est. |
+|------|-------|-----|-----|----------|
+| AI + Hub | Beelink EQR6 (16GB/500GB) | 1 | $329 | ~NZ$556 |
+| Zigbee/Thread radio | Home Assistant Connect ZBT-2 | 1 | $30 | ~NZ$51 |
+| In-wall relay (lights) | Shelly 1PM Gen4 | 8 | $184 | ~NZ$311 |
+| Rewiring allowance | Electrician labor, 8 circuits | 8 | ~$80-160 | ~NZ$135-270 |
+| Presence sensor | Aqara FP300 (mmWave, battery) | 3 | $135 | ~NZ$228 |
+| Voice endpoint | M5Stack ATOM Echo S3R | 1 | $15 | ~NZ$25 |
+| | | | **~$773-853** | **~NZ$1,306-1,441** |
+
+*NZD estimates use 1 USD ~= 1.69 NZD. Actual NZ retail and shipping will vary.*
 
 **Why these devices:**
 - **Shelly 1PM Gen4:** Multi-protocol (Wi-Fi + Zigbee + Matter in one), 16A, power monitoring, fits in junction box. "Works with Home Assistant" certified. No better alternative exists.
@@ -98,9 +100,9 @@ This is the right answer when the customer says, "I want this one switch to turn
 ### What the customer gets
 
 - **AI home assistant** from day one: *"Turn off everything downstairs," "What lights are on?"*
-- **Voice from day one:** One ATOM Echo mic ships with every Phase 1 install — the installer uses it to document wiring hands-free, then it stays as the customer's first voice endpoint
+- **One basic voice point included:** a single low-cost mic can be used during commissioning, switch reassignment, and simple one-location voice control
 - **Home definition:** *"What's set up in my house?"* — the AI describes every room and device
-- Phone, voice, and wall-switch control of all lights
+- Phone, basic voice, and wall-switch control of all lights
 - Presence-activated lighting (hallways, bathrooms, stairs — knows you're there even sitting still)
 - Schedules: lights on at sunset, off at bedtime
 - Scenes: "Movie night," "Good morning," "Away mode" (random lights to simulate occupancy)
@@ -113,10 +115,10 @@ This is the right answer when the customer says, "I want this one switch to turn
 
 | | |
 |---|---|
-| Parts + rewiring allowance | ~$773-853 |
-| Install labor (half day to full day) | ~$300-500 |
-| **Customer price** | **~$1,100-1,350** |
-| Monthly support (optional) | ~$20/mo |
+| Parts + rewiring allowance | ~NZ$1,310-1,445 |
+| Install labor (half day to full day) | ~NZ$1,200-2,100 |
+| **Customer price** | **~NZ$2,900-3,600** |
+| Monthly support (optional) | ~NZ$35/mo |
 
 ---
 
@@ -126,12 +128,12 @@ Add security at the front door. Your son's core strength. The AI brain is alread
 
 ### Parts list
 
-| Item | Model | Protocol | Qty | Unit price | Subtotal |
-|------|-------|----------|-----|------------|----------|
-| Smart lock | Aqara U200 | Matter over Thread | 1 | $200 | $200 |
-| Door/window sensor | Aqara P2 | Matter over Thread | 4 | $20 | $80 |
-| Doorbell camera | Reolink Video Doorbell PoE | Ethernet/RTSP | 1 | $100 | $100 |
-| | | | | **Hardware total** | **~$380** |
+| Item | Model | Qty | USD | NZD est. |
+|------|-------|-----|-----|----------|
+| Smart lock | Aqara U200 | 1 | $200 | ~NZ$338 |
+| Door/window sensor | Aqara P2 | 4 | $80 | ~NZ$135 |
+| Doorbell camera | Reolink Video Doorbell PoE | 1 | $100 | ~NZ$169 |
+| | | | **~$380** | **~NZ$642** |
 
 **Why these devices:**
 - **Aqara U200:** Native Matter over Thread — no proprietary bridge needed. Rechargeable battery (6 months per charge), Apple Home Key + fingerprint + NFC + PIN. The first truly local smart lock.
@@ -154,10 +156,10 @@ Add security at the front door. Your son's core strength. The AI brain is alread
 
 | | |
 |---|---|
-| Hardware | ~$380 |
-| Install labor (2-4 hours) | ~$200-400 |
-| **Customer price** | **~$600-800** |
-| Monthly support | ~$25/mo |
+| Hardware | ~NZ$646-846 |
+| Install labor (2-4 hours) | ~NZ$450-800 |
+| **Customer price** | **~NZ$1,300-1,650** |
+| Monthly support | ~NZ$40/mo |
 
 ---
 
@@ -167,16 +169,16 @@ Expand to the full house. Upgrade cameras to Frigate for AI-powered detection.
 
 ### Parts list
 
-| Item | Model | Protocol | Qty (typical) | Unit price | Subtotal |
-|------|-------|----------|---------------|------------|----------|
-| PoE cameras | Dahua IPC-HDW 4-5MP turret | Ethernet/RTSP | 3 | $70 | $210 |
-| Garage/gate relay | Shelly 1PM Gen4 | Wi-Fi/Zigbee/Matter | 2 | $23 | $46 |
-| Climate relay or thermostat | Shelly 1PM Gen4 or smart thermostat | varies | 1 | $23-150 | $23-150 |
-| Water leak sensor | Aqara Water Leak Sensor T1 | Zigbee | 3 | $18 | $54 |
-| Additional door sensors | Aqara P2 | Matter over Thread | 4 | $20 | $80 |
-| Coral USB accelerator (for Frigate) | Google Coral USB | USB | 1 | $35 | $35 |
-| PoE switch | TP-Link TL-SG1008P (8-port) | Ethernet | 1 | $55 | $55 |
-| | | | | **Hardware total** | **~$500-630** |
+| Item | Model | Qty | USD | NZD est. |
+|------|-------|-----|-----|----------|
+| PoE cameras | Dahua IPC-HDW 4-5MP turret | 3 | $210 | ~NZ$355 |
+| Garage/gate relay | Shelly 1PM Gen4 | 2 | $46 | ~NZ$78 |
+| Climate relay or thermostat | Shelly 1PM Gen4 or smart thermostat | 1 | $23-150 | ~NZ$39-254 |
+| Water leak sensor | Aqara Water Leak Sensor T1 | 3 | $54 | ~NZ$91 |
+| Additional door sensors | Aqara P2 | 4 | $80 | ~NZ$135 |
+| Coral USB accelerator (Frigate) | Google Coral USB | 1 | $35 | ~NZ$59 |
+| PoE switch | TP-Link TL-SG1008P (8-port) | 1 | $55 | ~NZ$93 |
+| | | | **~$503-630** | **~NZ$850-1,065** |
 
 **Why these devices:**
 - **Dahua 4-5MP PoE:** Frigate's #1 recommended brand. Rock-solid RTSP, configurable sub-streams (high-res for recording, low-res for detection). Much better than Reolink at 4K+ which has stream reliability issues with Frigate.
@@ -199,10 +201,10 @@ Expand to the full house. Upgrade cameras to Frigate for AI-powered detection.
 
 | | |
 |---|---|
-| Hardware | ~$500-630 |
-| Install labor (1-2 days) | ~$500-1,000 |
-| **Customer price** | **~$1,200-2,000** |
-| Monthly support | ~$30/mo |
+| Hardware | ~NZ$850-1,070 |
+| Install labor (1-2 days) | ~NZ$1,150-2,280 |
+| **Customer price** | **~NZ$2,000-3,350** |
+| Monthly support | ~NZ$50/mo |
 
 ---
 
@@ -212,11 +214,11 @@ The AI brain gets ears and a mouth throughout the house.
 
 ### Parts list
 
-| Item | Model | Protocol | Qty (typical) | Unit price | Subtotal |
-|------|-------|----------|---------------|------------|----------|
-| Voice (premium rooms) | HA Voice Preview Edition | Wi-Fi/ESPHome | 2 | $59 | $118 |
-| Voice (other rooms) | M5Stack ATOM Echo S3R | Wi-Fi/ESPHome | 3 | $15 | $45 |
-| | | | | **Hardware total** | **~$163** |
+| Item | Model | Qty | USD | NZD est. |
+|------|-------|-----|-----|----------|
+| Voice (premium rooms) | HA Voice Preview Edition | 2 | $118 | ~NZ$199 |
+| Voice (other rooms) | M5Stack ATOM Echo S3R | 3 | $45 | ~NZ$76 |
+| | | | **~$163** | **~NZ$275** |
 
 **Why these devices:**
 - **HA Voice Preview Edition:** Purpose-built for HA, best microphone array + speaker, display. For kitchen and living room.
@@ -225,6 +227,7 @@ The AI brain gets ears and a mouth throughout the house.
 ### What the customer gets
 
 - Hands-free voice in every room: *"Hey house, lock up and turn on the porch light"*
+- Upgrades the single commissioning/basic voice point from Phase 1 into full-room coverage
 - No cloud dependency — Alexa/Google not needed
 - AI proactive alerts via voice: *"The back door has been open for 10 minutes"*
 - Natural language queries: *"Was the garage open last night?"*
@@ -235,10 +238,10 @@ The AI brain gets ears and a mouth throughout the house.
 
 | | |
 |---|---|
-| Hardware | ~$163 |
-| Setup + configuration | ~$200-400 |
-| **Customer price** | **~$400-600** |
-| Monthly support | ~$35/mo |
+| Hardware | ~NZ$275 |
+| Setup + configuration | ~NZ$425-775 |
+| **Customer price** | **~NZ$700-1,050** |
+| Monthly support | ~NZ$60/mo |
 
 ---
 
@@ -461,13 +464,14 @@ This is a strong real-world starter package for a family home because it gives t
 
 ## Cumulative Investment per Phase (Typical Home)
 
-| Phase | What | Hardware | Install | Customer price | Monthly |
-|-------|------|----------|---------|----------------|---------|
-| 1 | Lighting + AI Brain + Voice | ~$773-853 | ~$300-500 | ~$1,100-1,350 | $20/mo |
-| 2 | Entry Security | ~$380 | ~$200-400 | ~$600-800 | $25/mo |
-| 3 | Whole-Home | ~$500-630 | ~$500-1,000 | ~$1,200-2,000 | $30/mo |
-| 4 | Voice Endpoints | ~$163 | ~$200-400 | ~$400-600 | $35/mo |
-| **All phases** | **Full house** | **~$1,815-2,025** | **~$1,200-2,300** | **~$3,300-4,750** | **$35/mo** |
+| Phase | What | Hardware | Install | Customer price | Monthly support |
+|-------|------|----------|---------|----------------|-----------------|
+| 1 | Lighting + AI Brain + Basic Voice | ~NZ$1,310-1,445 | ~NZ$1,200-2,100 | ~NZ$2,900-3,600 | NZ$35/mo |
+| 1+2 | + Entry Security | ~NZ$1,952-2,287 | ~NZ$1,650-2,900 | ~NZ$4,200-5,250 | NZ$40/mo |
+| 1-3 | + Whole-Home | ~NZ$2,802-3,352 | ~NZ$2,800-5,180 | ~NZ$6,200-8,600 | NZ$50/mo |
+| 1-4 | + Voice Endpoints | ~NZ$3,077-3,627 | ~NZ$3,225-5,955 | ~NZ$6,900-9,650 | NZ$60/mo |
+
+**Monthly support is one fee** that covers the entire system, not per-phase. When a customer adds a phase, their monthly fee moves up to the new tier — they don't pay multiple fees.
 
 ---
 
@@ -538,15 +542,15 @@ This is a compliance risk. Define clearly what your son does and what the electr
 ### Revenue streams
 
 1. **Hardware + install** — one-time, per phase
-2. **Monthly support** — remote troubleshooting, updates, seasonal adjustments, new automations ($20-35/mo)
+2. **Monthly support** — remote troubleshooting, updates, seasonal adjustments, new automations (NZ$35-60/mo)
 3. **Phase upgrades** — each phase is an upsell from the last
-4. **Annual service visit** — physical check, firmware updates, battery replacements, network health (~$150-200)
+4. **Annual service visit** — physical check, firmware updates, battery replacements, network health (~NZ$250-350)
 
 ### Monthly support scope (protect your margins)
 
 Define what is included and what costs extra. Without clear boundaries, support customers will consume unlimited time.
 
-**Included in monthly support ($20-35/mo):**
+**Included in monthly support (NZ$35-60/mo):**
 - Remote troubleshooting via Home Assistant dashboard (up to 30 min/mo)
 - Firmware and Home Assistant updates (scheduled, not emergency)
 - Seasonal schedule adjustments (e.g. daylight saving, holiday modes)
@@ -588,7 +592,7 @@ Phase 1 (lights + AI) → customer uses AI daily → AI surfaces upgrade opportu
 
 | | Per customer | 10 customers/mo |
 |---|---|---|
-| Phase 1 install | ~$1,100 | $11,000/mo |
-| Phase 2 upsell (60% convert) | ~$700 | $4,200/mo |
-| Monthly support (cumulative) | $20-35/mo each | grows monthly |
-| Year 1 monthly recurring (120 customers) | | ~$2,400-4,200/mo |
+| Phase 1 install | ~NZ$3,200 | ~NZ$32,000/mo |
+| Phase 2 upsell (60% convert) | ~NZ$1,450 | ~NZ$8,700/mo |
+| Monthly support (cumulative) | NZ$35-60/mo each | grows monthly |
+| Year 1 monthly recurring (120 customers) | | ~NZ$4,200-7,200/mo |
